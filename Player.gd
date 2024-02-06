@@ -5,6 +5,7 @@ extends CharacterBody3D
 @onready var camera = $Node3D/SpringArm3D
 @onready var camera_act = $Node3D/SpringArm3D/Camera3D
 @export var SPEED = 10.0
+
 const JUMP_VELOCITY = 20
 var temp = 0
 var double_jump = 0
@@ -37,6 +38,7 @@ func _ready():
 
 func _physics_process(delta):
 	sanity -= 0.000001
+
 	if Input.is_action_just_pressed("heal") and score > 50:
 		health += 25
 		score -= 50

@@ -27,6 +27,7 @@ offset_left = 150.0
 offset_top = 996.0
 offset_right = 1812.0
 offset_bottom = 1079.0
+theme_override_colors/default_color = Color(0.819608, 0.4, 0, 1)
 
 [node name="Jump_Power" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -57,6 +58,7 @@ layout_mode = 0
 offset_top = 4.0
 offset_right = 348.0
 offset_bottom = 82.0
+theme_override_colors/default_color = Color(0.384314, 0.72549, 1, 1)
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "VELOCITY_Y:"
@@ -76,6 +78,7 @@ offset_left = 1458.0
 offset_top = 17.0
 offset_right = 1925.0
 offset_bottom = 75.0
+theme_override_colors/default_color = Color(0.956863, 0, 0.27451, 1)
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "[right]SCORE:[/right]"

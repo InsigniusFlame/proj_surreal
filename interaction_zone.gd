@@ -1,11 +1,16 @@
 extends Area3D
-@onready var interact_prompt = get_parent().get_parent().get_node("HUD/textbox") 
-@onready var player = get_parent().get_parent().get_node("Player")
+
+@onready var interact_prompt = get_parent().get_node("HUD/textbox") # two parents required when in lvl 0 
+@onready var player = get_parent().get_node("Player")
 var player_in_zone = false
 
 @export var interactable_type = ""
 
 
+func _ready():
+	if get_parent().get_parent().get_node("Player"):
+		interact_prompt = get_parent().get_parent().get_node("HUD/textbox")
+		player = get_parent().get_parent().get_node("Player")
 func _on_body_entered(body):
 	if body.name == "Player":
 		player_in_zone = true
