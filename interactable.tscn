@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvjj3wxj0b3so"]
+
+[ext_resource type="Script" path="res://interact.gd" id="1_44777"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_rk3cg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8aoif"]
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("SphereMesh_rk3cg")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+collision_layer = 2
+script = ExtResource("1_44777")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_8aoif")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

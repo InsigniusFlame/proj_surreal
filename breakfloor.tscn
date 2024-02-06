@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk3kla71labr5"]
+
+[ext_resource type="Script" path="res://breakfloor.gd" id="1_xq3gb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_t2gul"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxiqj"]
+albedo_color = Color(0.843137, 0.32549, 0.0156863, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_463ku"]
+
+[node name="breakfloor" type="CSGMesh3D"]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
+use_collision = true
+collision_layer = 3
+mesh = SubResource("BoxMesh_t2gul")
+material = SubResource("StandardMaterial3D_dxiqj")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+script = ExtResource("1_xq3gb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1.01149, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_463ku")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

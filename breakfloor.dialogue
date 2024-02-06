@@ -1,0 +1,7 @@
+~ breakfloor
+
+Floor: Oh! Be gentle!! I might crumble if you come any faster.
+- I am going to break you
+	Floor: I don't see why you would want to do that. What did I do??
+- Goodbye => END
+=> END

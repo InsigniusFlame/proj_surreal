@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqwvgmofbig3y"]
+
+[ext_resource type="PackedScene" uid="uid://b74jw41jeplsy" path="res://player.tscn" id="1_lyvgj"]
+[ext_resource type="PackedScene" uid="uid://bfxfgyb5rhryc" path="res://hud.tscn" id="2_4bpq0"]
+[ext_resource type="PackedScene" uid="uid://c4iljppwern5v" path="res://interaction_zone.tscn" id="3_d00hg"]
+[ext_resource type="Script" path="res://sanityfloor.gd" id="4_b13vx"]
+[ext_resource type="PackedScene" uid="uid://dk3kla71labr5" path="res://breakfloor.tscn" id="4_xsgof"]
+
+[node name="Level 0" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_lyvgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.708085, 0, -2.1114)
+
+[node name="HUD" parent="." instance=ExtResource("2_4bpq0")]
+anchors_preset = -1
+anchor_left = 0.0
+anchor_top = -0.009
+anchor_right = 0.0
+anchor_bottom = -0.009
+offset_left = 0.0
+offset_top = -0.168
+offset_right = 1920.0
+offset_bottom = 1079.83
+
+[node name="start_plat" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.66238, -2.22522)
+use_collision = true
+size = Vector3(10, 1, 10)
+
+[node name="interaction_zone" parent="start_plat" instance=ExtResource("3_d00hg")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0.399814, 0.536605)
+interactable_type = "quicksand"
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.90516, 81.1396)
+use_collision = true
+size = Vector3(20, 1, 20)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.90516, 27.1761)
+use_collision = true
+size = Vector3(20, 1, 20)
+script = ExtResource("4_b13vx")
+
+[node name="WALL" type="CSGBox3D" parent="."]
+transform = Transform3D(1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, -10.5277, 5.90516, 54.0453)
+use_collision = true
+size = Vector3(20, 1, 20)
+metadata/_edit_group_ = true
+
+[node name="interaction_zone" parent="WALL" instance=ExtResource("3_d00hg")]
+transform = Transform3D(20, 0, 0, 0, 3, 0, 0, 0, 20, 0, 0, 0)
+interactable_type = "wall_runnable"
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.381977, -71.0285, 108.886)
+use_collision = true
+size = Vector3(20, 1, 20)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0134697, -20.7145, 96.7559)
+use_collision = true
+size = Vector3(20, 1, 100)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.63627, 7.81978)
+use_collision = true
+size = Vector3(10, 9, 10)
+
+[node name="breakfloor" parent="." instance=ExtResource("4_xsgof")]
+transform = Transform3D(19.023, 0, 0, 0, 1, 0, 0, 0, 18.2904, 0.44187, -55.6211, 109.177)
+
+[node name="breakfloor2" parent="." instance=ExtResource("4_xsgof")]
+transform = Transform3D(19.023, 0, 0, 0, 1, 0, 0, 0, 18.2904, 0.44187, -24.4086, 109.177)

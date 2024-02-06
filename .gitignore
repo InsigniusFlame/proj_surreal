@@ -1,0 +1,23 @@
+# Godot 4+ specific ignores
+.godot/
+addons/
+Sand_003_COLOR.jpg
+Sand_003_COLOR.jpg.import
+Sand_003_DISP.png
+Sand_003_DISP.png.import
+Sand_003_NORM.jpg
+Sand_003_NORM.jpg.import
+Sand_003_ROUGH.jpg
+Sand_003_ROUGH.jpg.import
+data.hterrain
+icon.svg
+icon.svg.import
+sand-surface-texture-beige-background-zen-peace-concept.jpg
+sand-surface-texture-beige-background-zen-peace-concept.jpg.import
+normal.png
+normal.png.import
+test_slot0_albedo_bump.png
+test_slot0_albedo_bump.png.import
+test_slot0_normal_roughness.png
+test_slot0_normal_roughness.png.import
+test.tscn

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dp4b0yc7ivvhd"
+path="res://.godot/imported/walltest.dialogue-ea8c55418df27a12846edae3fd8cb395.tres"
+
+[deps]
+
+source_file="res://walltest.dialogue"
+dest_files=["res://.godot/imported/walltest.dialogue-ea8c55418df27a12846edae3fd8cb395.tres"]
+
+[params]
+
+defaults=true

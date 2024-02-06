@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfxfgyb5rhryc"]
+
+[ext_resource type="PackedScene" uid="uid://n2vdd3ww8nt0" path="res://textbox.tscn" id="1_2pm1w"]
+[ext_resource type="Script" path="res://Jump_Power.gd" id="2_p0rfg"]
+[ext_resource type="Script" path="res://ColorRect.gd" id="3_kp68r"]
+[ext_resource type="Script" path="res://velo.gd" id="4_an3nt"]
+[ext_resource type="Script" path="res://health.gd" id="5_q2cwq"]
+[ext_resource type="Script" path="res://score.gd" id="6_y76ft"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -330.0
+offset_right = 1344.0
+offset_bottom = 750.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="textbox" parent="." instance=ExtResource("1_2pm1w")]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 996.0
+offset_right = 1812.0
+offset_bottom = 1079.0
+
+[node name="Jump_Power" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 770.0
+offset_right = 1215.0
+offset_bottom = 872.0
+theme_override_colors/default_color = Color(0.988235, 0.960784, 0.937255, 1)
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]JUMP POWER: x% [/center]"
+script = ExtResource("2_p0rfg")
+
+[node name="ColorRect" type="ColorRect" parent="Jump_Power"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.028
+anchor_right = -0.028
+offset_left = 42.88
+offset_right = 542.88
+offset_bottom = 50.0
+color = Color(0.470588, 0.658824, 0.584314, 1)
+script = ExtResource("3_kp68r")
+
+[node name="velo" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 348.0
+offset_bottom = 82.0
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "VELOCITY_Y:"
+script = ExtResource("4_an3nt")
+
+[node name="health" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 63.0
+offset_right = 224.0
+offset_bottom = 139.0
+theme_override_font_sizes/normal_font_size = 35
+script = ExtResource("5_q2cwq")
+
+[node name="score" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 1458.0
+offset_top = 17.0
+offset_right = 1925.0
+offset_bottom = 75.0
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[right]SCORE:[/right]"
+script = ExtResource("6_y76ft")

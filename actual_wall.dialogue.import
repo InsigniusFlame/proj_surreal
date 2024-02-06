@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bjauet6cnfol0"
+path="res://.godot/imported/actual_wall.dialogue-275b1776757139a75e481be9655c1677.tres"
+
+[deps]
+
+source_file="res://actual_wall.dialogue"
+dest_files=["res://.godot/imported/actual_wall.dialogue-275b1776757139a75e481be9655c1677.tres"]
+
+[params]
+
+defaults=true

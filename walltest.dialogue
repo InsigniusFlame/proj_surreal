@@ -1,0 +1,15 @@
+~ this_is_a_node_title
+
+QUICKSAND: [[Hi|Hello|Howdy]], this is the quicksand.
+- "Didnt know quicksand talked"
+	QUICKSAND: Ofcourse it does, especially to a golem like you. Are you a newly formed?
+	- "Yea ig"
+		QUICKSAND: Remember, the floors and walls have ears but some of them have mouths too. Not all will be as open to conversation as me though
+		=> this_is_a_node_title
+- "Any tips?"
+	Nathan: Use <SHIFT> to use your charge jump.
+- Start again => this_is_a_node_title
+- End the conversation => END
+
+
+=> END

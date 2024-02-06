@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dbh475dralssb"
+path="res://.godot/imported/breakfloor.dialogue-7f317230c8c61e93467ffa16dbcfc016.tres"
+
+[deps]
+
+source_file="res://breakfloor.dialogue"
+dest_files=["res://.godot/imported/breakfloor.dialogue-7f317230c8c61e93467ffa16dbcfc016.tres"]
+
+[params]
+
+defaults=true
